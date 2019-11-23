@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  
+
   def index
     @students = Student.all
   end
@@ -12,6 +12,9 @@ class StudentsController < ApplicationController
   end
 
   def create
+    
+    student.create()
+    redirect_to student_link(student)
   end
 
 end
